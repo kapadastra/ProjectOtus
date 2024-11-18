@@ -17,13 +17,13 @@ public class HomePage {
     private static final Logger logger = LogManager.getLogger(HomePage.class);
 
     // Локатор для раздела "Тестирование"
-    private By testingCoursesSection = By.xpath("//*[@id=\"__next\"]/div[1]/main/section[1]/section/div/div/div[10]");
+    private By testingCoursesSection = By.xpath("//div[text()='Тестирование']");
 
     // Локатор для раздела "Обучение"
-    private By trainingSection = By.xpath("//*[@id=\"__next\"]/div[1]/div[2]/div/nav/div[2]");
+    private By trainingSection = By.cssSelector("span[title='Обучение']");
 
     // Локатор для "Календаря мероприятий" в выпадающем меню
-    private By eventsCalendar = By.xpath("//*[@id=\"__next\"]/div[1]/div[2]/div/nav/div[3]/div/div/div[2]/div/a[3]");
+    private By eventsCalendar = By.cssSelector("a[href='https://otus.ru/events/near']");
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
